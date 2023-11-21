@@ -3,11 +3,13 @@ import asyncio
 import json
 import pandas as pd
 from datetime import datetime
-from Data.NBRTU_Data import nbrtuModel, NBRTU_val, ndel_items, nagad_items, bkash_items, rocket_items, tap_items, upay_items
+from Data.NBRTU_Data import nbrtuModel, old_nbrtuModel, NBRTU_val, ndel_items, nagad_items, bkash_items, rocket_items, tap_items, upay_items, new_items
 import pytz
 import requests
 import cv2
 import numpy as np
+
+
 def get_bd_time():
     bd_timezone = pytz.timezone("Asia/Dhaka")
     time_now = datetime.now(bd_timezone)
@@ -82,11 +84,26 @@ async def detect_objects(model, url):
 
 # Multi-Threading detection 
 async def detect_sequence(url):
-    nbrtuModel.conf = 0.45
+
+    nbrtuModel.conf = 0.1
+    old_nbrtuModel.conf = 0.45
     # tasks = [detect_objects(nbrtuModel, url)]
     # results = await asyncio.gather(*tasks)
-    results = await asyncio.create_task(detect_objects(nbrtuModel,url))
-    nbrtuDict = results
+    tasks = [
+        detect_objects(old_nbrtuModel, url),
+        detect_objects(nbrtuModel, url)
+    ]
+    results = await asyncio.gather(*tasks)
+
+    old, new = results
+    # results = await asyncio.create_task(detect_objects(nbrtuModel,url))
+    # nbrtuDict = results
+    nbrtuDict = old
+    for item in new_items:
+        if item in new:
+            data = {item:new[item]}
+            nbrtuDict.update(data)
+        
 
     # Nagad Bkash Rocket Tap Upay Validation :
     for val_item in NBRTU_val:
