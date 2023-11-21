@@ -1,5 +1,6 @@
 import torch
-nbrtuModel = torch.hub.load('yolov5', 'custom', path='AI_Models/best.pt', source='local') # , device=0)
+nbrtuModel = torch.hub.load('yolov5', 'custom', path='AI_Models/Nagad_AI_V5.pt', source='local') # , device=0)
+old_nbrtuModel = torch.hub.load('yolov5', 'custom', path='AI_Models/Nagad_AI_V3.pt', source='local', device=0)
 # nbrtuModel.conf = 0.4
 # nbrtuModel.iou = 0.2
 
@@ -37,8 +38,8 @@ NBRTU_val = [
                 "nagad_hanging_display",
                 "nagad_x_banner",
                 "nagad_ms_standee",
-                'nagad_sticker_shutter_panel',
-                "rocket_sticker_qr_code",
+                'nagad_sticker_shutter_panel', # new v5
+                "rocket_sticker_qr_code", 
                 "rocket_sticker_shutter",
                 "rocket_sticker_running",
                 "rocket_sticker_table",
@@ -86,7 +87,6 @@ nagad_items = [
                 'nagad_festoon_price_2',
                 'nagad_festoon_price_3',
                 'nagad_festoon_remittance',
-                'nagad_festoon_send_money',
                 'nagad_hanging_display',
                 'nagad_ms_standee',
                 'nagad_poster_fraud_awareness_1',
@@ -94,7 +94,6 @@ nagad_items = [
                 'nagad_poster_islamic',
                 'nagad_poster_mobile_recharge_shakib',
                 'nagad_poster_remittance_2',
-                'nagad_shop_banner_customized',
                 'nagad_shop_banner_lenden',
                 'nagad_shop_banner_price_1',
                 'nagad_shop_banner_price_2',
@@ -137,7 +136,9 @@ ndel_items = [
                 'nagad_back_lit_2',
                 'nagad_board_back_lit_1_with_picture',
                 'nagad_x_banner',
-                'bkash_table_top_qr_smart'
+                'bkash_table_top_qr_smart',
+                'nagad_festoon_send_money', # new add 
+                'nagad_shop_banner_customized' # new add
             ]
 
 
@@ -156,6 +157,7 @@ bkash_items = [
                 'bkash_poster_mobile_recharge', 
                 'bkash_poster_remittance', 
                 'bkash_poster_savings', 
+                'bkash_festoon_savings_new' # new v4
                 'bkash_poster_send_money', 
                 'bkash_poster_table_messi', 
                 'bkash_poster_western_union', 
@@ -176,8 +178,7 @@ bkash_items = [
                 'bkash_sticker_table', 
                 'bkash_sticker_transaction', 
                 'bkash_table_top_qr_pvc_dai_cut', 
-                'bkash_table_top_qr_pvc_running',
-                'bkash_festoon_savings_new' # new v4
+                'bkash_table_top_qr_pvc_running'
             ]
 
 
@@ -232,3 +233,24 @@ upay_items = [
             ]
 
 
+
+new_items = [
+        'nagad_festoon_price_3', # conflicted item
+        'nagad_shop_banner_cash_out', # new v5
+        'nagad_festoon_send_money_free', # new v5
+        'nagad_poster_pdb', # new v5
+        'nagad_sticker_shutter_panel', # new v5
+        'nagad_poster_all_service', # new v5
+        'bkash_festoon_savings_new' # new v4
+        'bkash_festoon_price', # updated v4 added yellow also
+        'bkash_shop_banner_price', # updated v4 added yellow also
+        'rocket_fastoon_wasa_bill', # new v5
+        'rocket_fastoon_bill_pay_new', # new v5
+        'rocket_fastoon_pdb_bill', # new v5
+        'rocket_fastoon_lenden_new', # new v5
+        'rocket_fastoon_polli_biddut', # new v5
+        'rocket_fastoon_remittance' # new v5
+        'upay_fastoon_dpdc', # new v5
+        'upay_fastoon_price_new', # new v5
+        'upay_fastoon_water_bill' # new v5
+]
