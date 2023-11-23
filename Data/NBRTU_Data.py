@@ -140,6 +140,7 @@ ndel_items = [
                 'nagad_festoon_send_money', # new add v5
                 'nagad_shop_banner_customized', # new add v5
                 'tap_table_top_qr' # add new v5
+                'bkash_hanger_push-pull_door' # add new v5
             ]
 
 
@@ -151,7 +152,6 @@ bkash_items = [
                 'bkash_festoon_qr', 
                 'bkash_festoon_remittance', 
                 'bkash_festoon_savings', 
-                'bkash_hanger_push-pull_door', 
                 'bkash_hanging_board_open-close',
                 'bkash_pos_pointer_back_led', 
                 'bkash_poster_islamic', 
