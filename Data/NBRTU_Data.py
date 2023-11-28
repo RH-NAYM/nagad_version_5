@@ -84,7 +84,6 @@ nagad_items = [
                 'nagad_festoon_price_2',
                 'nagad_festoon_price_3',
                 'nagad_festoon_remittance',
-                'nagad_hanging_display',
                 'nagad_ms_standee',
                 'nagad_poster_fraud_awareness_1',
                 'nagad_poster_fraud_awareness_2',
