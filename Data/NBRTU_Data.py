@@ -76,9 +76,6 @@ NBRTU_val = [
 
 
 nagad_items = [
-                'nagad_identifier_nagad',
-                'nagad_board_open_close_pvc',
-                'nagad_festoon_bmet',
                 'nagad_festoon_indian_visa',
                 'nagad_festoon_islamic',
                 'nagad_festoon_lenden_1',
@@ -126,6 +123,9 @@ nagad_items = [
             ]
 
 ndel_items = [
+                'nagad_identifier_nagad',
+                'nagad_board_open_close_pvc',
+                'nagad_festoon_bmet',
                 'nagad_poster_1000_cashback',
                 'nagad_poster_ananto_bmw',
                 'nagad_table_talker',
