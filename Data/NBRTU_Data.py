@@ -122,6 +122,7 @@ nagad_items = [
             ]
 
 ndel_items = [
+                "nagad_hanging_display",
                 'nagad_identifier_nagad',
                 'nagad_board_open_close_pvc',
                 'nagad_festoon_bmet',
