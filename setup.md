@@ -16,7 +16,7 @@ curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc | sudo tee /etc/apt/trust
 
 ngrok config add-authtoken 2Qm8hS1zPhVXiLjEdlI4738tLzF_2QJwGJMK5oTbQD33QSVXS
 
-pip install -r requirements.txt
+cd yolov5 && pip install -r requirements.txt && cd ..
 
 sudo apt update && sudo apt upgrade
 
