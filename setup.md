@@ -2,11 +2,7 @@ sudo apt install iproute2 && sudo apt install wget && sudo apt install unzip && 
 
 apt-get update && apt-get install libgl1
 
-pip install fastapi uvicorn pydantic
-
-pip install pytz
-
-apt install nvtop
+pip install fastapi uvicorn pydantic pytz
 
 wget "https://nagad-pulse.sgp1.digitaloceanspaces.com/nagad_AI_version5.zip"
 
